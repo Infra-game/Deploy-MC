@@ -23,6 +23,6 @@ spec:
         - name: MODE
           value: "###MODE###"
         - name: MOTD
-          value: "###MOTD##"
+          value: "###MOTD###"
         - name: ALLOW_FLIGHT
           value: "###FLIGHT###"
