@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ###NAME###
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ###NAME###
+  template:
+    metadata:
+      labels:
+        app: ###NAME###
+    spec:
+      containers:
+      - name: ###NAME###
+        image: itzg/minecraft-server
+        ports:
+        - containerPort: 25565
+        env:
+        - name: EULA
+          value: "TRUE"
+        - name: MODE
+          value: "###MODE###"
+        - name: MOTD
+          value: "###MOTD###"
+        - name: ALLOW_FLIGHT
+          value: "###FLIGHT###"
